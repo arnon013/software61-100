@@ -3,6 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Report extends CI_Controller {
 
+    function __construct()
+    {
+        parent::__construct();
+        echo "Construtor";
+    }
 	public function index()
 	{
         echo "Report Index";
@@ -38,8 +43,8 @@ class Report extends CI_Controller {
     }
     public function showbooks()
     {
-        $data["book"]=array("Jave","Kolin","php");
-        $this->load->view("book_page",$data);
+        $data["books"]=array("Jave","Kolin","php");
+        $this->load->view("books_page",$data);
     }
 
 
